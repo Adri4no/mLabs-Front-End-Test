@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dash board</title>
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
@@ -15,17 +15,22 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
     <!-- User Menu -->
-    <script src="app/userMenu/module.js"></script>
-    <script src="app/userMenu/controller.js"></script>
-    <script src="app/userMenu/directive.js"></script>
-    <!-- End -->
+    <script src="app/userMenu/userMenu.module.js"></script>
+    <script src="app/userMenu/userMenu.controller.js"></script>
+    <script src="app/userMenu/userMenu.directive.js"></script>
+    
+    <!-- Applications Menu -->
+    <script src="app/applicationsMenu/applicationsMenu.module.js"></script>
+    <script src="app/applicationsMenu/applicationsMenu.controller.js"></script>
+    <script src="app/applicationsMenu/applicationsMenu.directive.js"></script>
 
     <script src="app.js"></script>
 
 </head>
 
 <body>
-    <user-menu></user-menu>
+    <user-menu ng-controller="userMenuController as vm"></user-menu>
+    <applications-menu ng-controller="applicationsMenuController as vm"></applications-menu>
 </body>
 
 </html>

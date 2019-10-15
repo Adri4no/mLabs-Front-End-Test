@@ -5,7 +5,7 @@
     function userMenu() {
         var userMenu = {
             restrict: "EA",
-            templateUrl: "app/userMenu/template.html",
+            templateUrl: "app/userMenu/userMenu.template.html",
             controller: "userMenuController",
             controllerAs: "vm"
         };

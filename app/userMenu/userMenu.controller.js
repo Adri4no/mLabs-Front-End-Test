@@ -6,6 +6,7 @@
         var vm = this
 
         vm.name = "Adriano"
+        vm.controllerName = 'userMenuController'
 
     }
 })()
