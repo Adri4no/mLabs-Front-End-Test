@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/Adri4no/mLabs-Front-End-Test#readme",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.7",
     "angular": "^1.7.8",
+    "angular-route": "^1.7.8",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
