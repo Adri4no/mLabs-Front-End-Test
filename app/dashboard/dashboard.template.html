@@ -1,6 +1,7 @@
-<div class="container">
+<div class="container" style="padding-top: 30px;">
     <div class="row">
-        <div class="col" ng-repeat="item in vm.socialMediaList">
+        <div class="col" style="flex-grow: 0;" ng-repeat="item in vm.socialMediaList">
+            <div><img style="width: 100px; height: 100px;" ng-src="{{item.picture}}" alt=""></div>
             {{item.name}}
         </div>
     </div>
