@@ -1,0 +1,21 @@
+#logoId {
+    color: aqua;
+    padding: 10px;
+    /* padding-bottom: 0px; */
+    border: 5px solid;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.helper-baloon{
+    margin-left: 6em;
+    position: absolute;    
+}
+
+.margin-around-10x{
+    margin: 10px;
+}
+
+span.gap{
+ width: 57%;
+}

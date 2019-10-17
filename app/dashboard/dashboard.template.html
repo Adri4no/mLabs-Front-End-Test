@@ -1,8 +1,47 @@
-<div class="container" style="padding-top: 30px;">
+<!-- <div class="container" style="padding-top: 30px;">
     <div class="row">
-        <div class="col" style="flex-grow: 0;" ng-repeat="item in vm.socialMediaList">
+        <div class="col" style="flex-grow: 0;" ng-repeat="item in vm.socialMediaPagesList">
             <div><img style="width: 100px; height: 100px;" ng-src="{{item.picture}}" alt=""></div>
             {{item.name}}
         </div>
     </div>
+</div> -->
+
+<div class="card text-center">
+    <div class="card-header">
+        <!-- <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul> -->
+    </div>
+    <div class="card-body">
+        <!-- <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        <div class="row" style="padding-left: 5.5em;">
+            <div class="card text-center" style="width: 18rem;" ng-repeat=" item in vm.socialMediaList">
+                <div class="card-body">
+                    <div>
+                        <i class="zmdi {{item.icon}} zmdi-hc-3x"></i>
+                        <i class="helper-baloon zmdi zmdi-help-outline zmdi-hc-1x" data-toggle="tooltip"
+                            data-placement="top" title="{{item.link}}"></i>
+                    </div>
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                    <button class="btn btn-primary margin-around-10x" data-toggle="modal" data-target="#exampleModal"
+                        ng-click="vm.openModalForAddSocialMedia(item)">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Modal -->
+<add-modal></add-modal>
