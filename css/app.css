@@ -7,15 +7,27 @@
     margin-top: 15px;
 }
 
-.helper-baloon{
+.helper-baloon {
     margin-left: 6em;
-    position: absolute;    
+    position: absolute;
 }
 
-.margin-around-10x{
+.margin-around-10x {
     margin: 10px;
 }
 
-span.gap{
- width: 57%;
+span.gap {
+    width: 57%;
+}
+
+.zoom {
+    /* padding: 50px; */
+    transition: transform .2s;
+    /* margin: 0 auto; */
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
