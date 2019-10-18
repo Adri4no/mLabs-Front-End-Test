@@ -1,0 +1,47 @@
+<!-- Add Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Vincular página do {{vm.selectedSocialMedia.name}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <table>
+                    <!-- <tr>
+                        <th>name</th>
+                        <th>picture</th>
+                    </tr> -->
+                    <tr ng-repeat="page in vm.socialMediaPagesList" ng-show="page.channel_key==vm.selectedSocialMedia.channel_key">
+                            <td>
+                                    <label class="custom-radio">
+                                            <input type="radio" name="radio">
+                                            <span class="checkmark" id="aligned"></span>
+                                            <h6>{{page.name}}</h6>
+                                            <p id="text-overflow" title="{{page.url}}">{{page.url}}</p>
+                                        </label>
+                            </td>
+                            <td><img style="width: 65px; height: 60px;" ng-src="{{page.picture}}" alt=""></td>
+                    </tr>
+                </table>
+                <!-- <div class="row" ng-repeat="page in vm.socialMediaPagesList" id="justhoverit">
+                    <label class="custom-radio">
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                        <h6>{{page.name}}</h6>
+                        <p>{{page.url}}</p>
+                    </label>
+                    <img style="width: 65px; height: 60px;" ng-src="{{page.picture}}" alt="">
+                </div> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <span class="gap"></span>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

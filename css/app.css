@@ -1,0 +1,118 @@
+#logoId {
+    color: aqua;
+    padding: 10px;
+    /* padding-bottom: 0px; */
+    border: 5px solid;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.helper-baloon {
+    margin-left: 6em;
+    position: absolute;
+}
+
+.margin-around-10x {
+    margin: 10px;
+}
+
+span.gap {
+    width: 57%;
+}
+
+.zoom {
+    /* padding: 50px; */
+    transition: transform .2s;
+    z-index: 1;
+    /* margin: 0 auto; */
+    /* margin-right: 5px; */
+    /* margin-bottom: 5px; */
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 99;
+    border: 2px solid;
+    border-color: #007bff;
+}
+
+.custom-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    /* font-size: 22px; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom-radio input {
+    position: absolute;
+    /* margin-left: 50px; */
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.custom-radio:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.custom-radio input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-radio input:checked~.checkmark:after {
+    display: block;
+}
+
+.custom-radio .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+#modalBody {
+    height: 300px;
+    /* margin-left: 3px; */
+}
+
+#justhoverit:hover {
+    /* background-color: #ccc; */
+
+}
+
+.checkmark#aligned {
+    top: 15px;
+}
+
+#text-overflow {
+    display: inline-block;
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
