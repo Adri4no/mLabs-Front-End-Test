@@ -22,6 +22,7 @@
     <script src="node_modules/angular-route/angular-route.min.js"></script>
     <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
     <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
 
     <!-- User Menu -->
     <script src="app/userMenu/userMenu.module.js"></script>
@@ -42,6 +43,7 @@
     <script src="app.js"></script>
     <script src="app.config.js"></script>
     <script src="app/commons/services/REST.services.js"></script>
+    <script src="app/commons/services/session.service.js"></script>
     <script src="app/commons/modal/modal.directive.js"></script>
 
 </head>
@@ -49,8 +51,6 @@
 <body>
     <user-menu ng-controller="userMenuController as vm"></user-menu>
     <applications-menu ng-controller="applicationsMenuController as vm"></applications-menu>
-
-    <!-- <div ng-view></div> -->
 
     <ui-view></ui-view>
 

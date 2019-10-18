@@ -116,3 +116,34 @@ span.gap {
     overflow: hidden !important;
     text-overflow: ellipsis;
 }
+
+.card-linked-page {
+
+}
+
+.card-linked-page h6 {
+    /* twitter */
+    padding: 5px;
+    border: 1px solid;
+    border-color: #00aced;
+    background-color: #00749e;
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-page div{
+    width: 100%; 
+    height: 100%;
+    background-color: #00aced;
+}
+
+.card-linked-page div i{
+    color: #fff;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.card-linked-page div span{
+    height: 200px;
+}

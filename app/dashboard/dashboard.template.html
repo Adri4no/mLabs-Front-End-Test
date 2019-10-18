@@ -18,7 +18,7 @@
       <a href="#" class="btn btn-primary">Go somewhere</a> -->
     <div class="row" style="padding-left: 5.5em;">
       <div class="card text-center zoom" style="width: 18rem;" ng-repeat=" item in vm.socialMediaList">
-        <div class="card-body">
+        <div class="card-body" ng-hide="item.linkedPage.id">
           <div>
             <i class="zmdi {{item.icon}} zmdi-hc-3x"></i>
             <i class="helper-baloon zmdi zmdi-help-outline zmdi-hc-1x" data-toggle="tooltip" data-placement="top"
@@ -28,6 +28,13 @@
           <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
           <button class="btn btn-primary margin-around-10x" data-toggle="modal" data-target="#exampleModal"
             ng-click="vm.openModalForAddSocialMedia(item)">Adicionar</button>
+        </div>
+        <div class="card-linked-page" ng-show="item.linkedPage.id">
+          <h6>{{item.linkedPage.name}}</h6>
+          <div>
+              <i class="zmdi {{item.icon}} zmdi-hc-3x"></i>
+              <span></span>
+          </div>
         </div>
       </div>
     </div>

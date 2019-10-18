@@ -15,32 +15,24 @@
                         <th>name</th>
                         <th>picture</th>
                     </tr> -->
-                    <tr ng-repeat="page in vm.socialMediaPagesList" ng-show="page.channel_key==vm.selectedSocialMedia.channel_key">
-                            <td>
-                                    <label class="custom-radio">
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark" id="aligned"></span>
-                                            <h6>{{page.name}}</h6>
-                                            <p id="text-overflow" title="{{page.url}}">{{page.url}}</p>
-                                        </label>
-                            </td>
-                            <td><img style="width: 65px; height: 60px;" ng-src="{{page.picture}}" alt=""></td>
+                    <tr ng-repeat="page in vm.socialMediaPagesList"
+                        ng-show="page.channel_key==vm.selectedSocialMedia.channel_key">
+                        <td ng-click="vm.selectPage(page)">
+                            <label class="custom-radio">
+                                <input type="radio" name="radio">
+                                <span class="checkmark" id="aligned"></span>
+                                <h6>{{page.name}}</h6>
+                                <p id="text-overflow" title="{{page.url}}">{{page.url}}</p>
+                            </label>
+                        </td>
+                        <td><img style="width: 65px; height: 60px;" ng-src="{{page.picture}}" alt=""></td>
                     </tr>
                 </table>
-                <!-- <div class="row" ng-repeat="page in vm.socialMediaPagesList" id="justhoverit">
-                    <label class="custom-radio">
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                        <h6>{{page.name}}</h6>
-                        <p>{{page.url}}</p>
-                    </label>
-                    <img style="width: 65px; height: 60px;" ng-src="{{page.picture}}" alt="">
-                </div> -->
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <span class="gap"></span>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <span class="gap"></span> -->
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="vm.savePage()">Próximo</button>
             </div>
         </div>
     </div>
