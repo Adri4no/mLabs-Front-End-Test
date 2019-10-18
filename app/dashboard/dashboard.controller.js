@@ -85,6 +85,10 @@
 
         function init() {
             init_JQuery();
+            for (let i = 0; i < vm.socialMediaList.length; i++) {
+                vm.socialMediaList[i].channel_key = vm.socialMediaList[i].name.toLocaleLowerCase();
+                
+            }
         }
 
         function init_JQuery() {
