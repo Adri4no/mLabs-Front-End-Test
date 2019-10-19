@@ -25,15 +25,18 @@
               title="{{item.link}}"></i>
           </div>
           <h5 class="card-title">{{item.name}}</h5>
-          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
           <button class="btn btn-primary margin-around-10x" data-toggle="modal" data-target="#exampleModal"
             ng-click="vm.openModalForAddSocialMedia(item)">Adicionar</button>
         </div>
-        <div class="card-linked-page" ng-show="item.linkedPage.id">
+        <div ng-class="{'card-linked-twitter':item.channel_key=='twitter',
+        'card-linked-facebook':item.channel_key=='facebook',
+        'card-linked-instagram':item.channel_key=='instagram',
+        'card-linked-pinterest':item.channel_key=='pinterest',
+        'card-linked-youtube':item.channel_key=='youtube'}" ng-show="item.linkedPage.id">
           <h6>{{item.linkedPage.name}}</h6>
           <div>
-              <i class="zmdi {{item.icon}} zmdi-hc-3x"></i>
-              <span></span>
+            <i class="zmdi {{item.icon}} zmdi-hc-4x"></i>
+            <div></div>
           </div>
         </div>
       </div>

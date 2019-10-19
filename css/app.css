@@ -117,12 +117,9 @@ span.gap {
     text-overflow: ellipsis;
 }
 
-.card-linked-page {
+.card-linked-twitter {}
 
-}
-
-.card-linked-page h6 {
-    /* twitter */
+.card-linked-twitter h6 {
     padding: 5px;
     border: 1px solid;
     border-color: #00aced;
@@ -131,19 +128,104 @@ span.gap {
     margin: 0;
 }
 
-.card-linked-page div{
-    width: 100%; 
+.card-linked-twitter div {
+    width: 100%;
     height: 100%;
     background-color: #00aced;
 }
 
-.card-linked-page div i{
+.card-linked-facebook {}
+
+.card-linked-facebook h6 {
+    padding: 5px;
+    border: 1px solid;
+    border-color: #3b5998;
+    background-color: #3b5998;
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-facebook div {
+    width: 100%;
+    height: 100%;
+    background-color: #3b5998;
+}
+
+.card-linked-instagram {}
+
+.card-linked-instagram h6 {
+    padding: 5px;
+    border: 1px solid;
+    border-color: #a82400;
+    background-color: #a82400;
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-instagram div {
+    width: 100%;
+    height: 100%;
+    background-color: #a82400;
+}
+
+.card-linked-pinterest {}
+
+.card-linked-pinterest h6 {
+    padding: 5px;
+    border: 1px solid;
+    border-color: #cb2027;
+    background-color: #cb2027;
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-pinterest div {
+    width: 100%;
+    height: 100%;
+    background-color: #cb2027;
+}
+
+.card-linked-youtube {}
+
+.card-linked-youtube h6 {
+    padding: 5px;
+    border: 1px solid;
+    border-color: #9c0000;
+    background-color: #9c0000;
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-youtube div {
+    width: 100%;
+    height: 100%;
+    background-color: #bb0000;
+}
+
+
+.card-linked-twitter div i,
+.card-linked-facebook div i,
+.card-linked-instagram div i,
+.card-linked-pinterest div i,
+.card-linked-youtube div i {
     color: #fff;
     position: absolute;
     top: 50px;
     left: 50px;
 }
 
-.card-linked-page div span{
+.card-linked-twitter div div,
+.card-linked-facebook div div,
+.card-linked-instagram div div,
+.card-linked-pinterest div div,
+.card-linked-youtube div div {
     height: 200px;
+    /* display: flexbox; */
+}
+
+.reduce-progress-bar {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
 }
