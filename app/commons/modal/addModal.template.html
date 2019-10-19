@@ -10,13 +10,13 @@
                 </button>
             </div>
             <div class="modal-body" id="modalBody">
-                <table>
-                    <!-- <tr>
-                        <th>name</th>
-                        <th>picture</th>
-                    </tr> -->
+                <div class="progress reduce-progress-bar" ng-show="vm.loadingPageList==true">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <table id="table" ng-show="vm.loadingPageList==false">
                     <tr ng-repeat="page in vm.socialMediaPagesList"
-                        ng-show="page.channel_key==vm.selectedSocialMedia.channel_key">
+                        ng-if="page.channel_key==vm.selectedSocialMedia.channel_key">
                         <td ng-click="vm.selectPage(page)">
                             <label class="custom-radio">
                                 <input type="radio" name="radio">
@@ -28,11 +28,17 @@
                         <td><img style="width: 65px; height: 60px;" ng-src="{{page.picture}}" alt=""></td>
                     </tr>
                 </table>
+                <div ng-show="vm.canShowWarning == true" style="position: absolute;
+                top: 50%;
+                left: 25%;">
+                    <h6>Não há páginas do {{vm.selectedSocialMedia.name}} vincular</h6>
+                </div>
             </div>
             <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <span class="gap"></span> -->
-                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="vm.savePage()">Próximo</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    ng-click="vm.savePage()">Próximo</button>
             </div>
         </div>
     </div>
