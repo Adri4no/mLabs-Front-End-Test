@@ -1,6 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module("app", ['ngRoute','user-menu', 'applications-menu', 'dashboard', 'ui.router', 'ngResource'])
+    angular.module("app", ['ngRoute','user-menu', 'applications-menu', 'dashboard', 'ui.router',
+     'ngResource', 'ngCookies'])
     
 })()

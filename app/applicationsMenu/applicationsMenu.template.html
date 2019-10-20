@@ -1,54 +1,37 @@
-<!-- <div class="container" style="width: 100%; margin: 0 auto;">
-    <div style="display: inline-block; padding-right: 30px;">
-        <div style="padding-left: 40%;"><i class="zmdi zmdi-view-dashboard zmdi-hc-2x"></i></div>
+<div class="menu">
+    <div class="menu-item menu-item-selected" ng-click="vm.get_informations('dashboard', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-view-dashboard zmdi-hc-2x"></i>
         <span>Dashboard</span>
     </div>
-    <div style="display: inline-block; padding-right: 30px;">
-        <div style="padding-left: 40%;"><i class="zmdi zmdi-calendar zmdi-hc-2x"></i></div>
-        <span>Angedar Post</span>
+    <div class="menu-item" ng-click="vm.get_informations('agendar-post', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-calendar zmdi-hc-2x"></i>
+        <span>Agendar Post</span>
     </div>
-    <div style="display: inline-block; padding-right: 30px;">
-        <div style="padding-left: 40%;"><i class="zmdi zmdi-inbox zmdi-hc-2x"></i></div>
+    <div class="menu-item" ng-click="vm.get_informations('in-box', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-inbox zmdi-hc-2x"></i>
         <span>In Box</span>
     </div>
-    <div style="display: inline-block; padding-right: 30px;">
-        <div style="padding-left: 40%;"><i class="zmdi zmdi-comments zmdi-hc-2x"></i></div>
+    <div class="menu-item" ng-click="vm.get_informations('feed', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-comments zmdi-hc-2x"></i>
         <span>Feed</span>
     </div>
-    <div style="display: inline-block; padding-right: 30px;">
-        <div style="padding-left: 40%;"><i class="zmdi zmdi-format-list-numbered zmdi-hc-2x"></i></div>
+    <div class="menu-item" ng-click="vm.get_informations('workflow', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-format-list-numbered zmdi-hc-2x"></i>
         <span>Workflow</span>
     </div>
-    <div style="display: inline-block; padding-right: 30px;">
-        <div style="padding-left: 40%;"><i class="zmdi zmdi-check-all zmdi-hc-2x"></i></div>
+    <div class="menu-item" ng-click="vm.get_informations('acompanhamentos', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-check-all zmdi-hc-2x"></i>
         <span>Acompanhamentos</span>
     </div>
-    <div style="display: inline-block; padding-right: 30px;">
-        <div style="padding-left: 40%;"><i class="zmdi zmdi-equalizer zmdi-hc-2x"></i></div>
-        <span>Relatorios</span>
+    <div class="menu-item" ng-click="vm.get_informations('relatorios', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-equalizer zmdi-hc-2x"></i>
+        <span>Relatórios</span>
     </div>
-</div> -->
+</div>
 
-<!-- <div class="container">
-    <div class="row">
-        <div class="col" style="flex-grow: 0;">
-            <div style="margin-left: 45%;"><i class="zmdi zmdi-view-dashboard zmdi-hc-2x"></i></div>
-            Dashboard
-        </div>
-        <div class="col" style="flex-grow: 0;">
-            <div style="margin-left: 45%;"><i class="zmdi zmdi-calendar zmdi-hc-2x"></i></div>
-            Angedar Post
-        </div>
-        <div class="col" style="flex-grow: 0;">
-                <div style="padding-left: 40%;"><i class="zmdi zmdi-inbox zmdi-hc-2x"></i></div>
-                <span>In Box</span>
-        </div>
-    </div>
-</div> -->
-
-<div class="container" style="background-color: #6c757d;">
+<!-- <div class="container" style="background-color: #6c757d;">
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <p id="logoId">LOGO</p>
+        <p id="logoId">LOGO</p>
         <label class="btn btn-secondary active" ng-click="vm.goTo('dashboard')">
             <div><i class="zmdi zmdi-view-dashboard zmdi-hc-2x"></i></div>
             <input type="radio" name="options" id="option1" autocomplete="off" checked> Dashboard
@@ -78,4 +61,4 @@
             <input type="radio" name="options" id="option3" autocomplete="off"> Relatorios
         </label>
     </div>
-</div>
+</div> -->

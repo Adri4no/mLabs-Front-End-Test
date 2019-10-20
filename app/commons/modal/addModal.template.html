@@ -10,37 +10,33 @@
                 </button>
             </div>
             <div class="modal-body" id="modalBody">
-                <table>
-                    <!-- <tr>
-                        <th>name</th>
-                        <th>picture</th>
-                    </tr> -->
-                    <tr ng-repeat="page in vm.socialMediaPagesList" ng-show="page.channel_key==vm.selectedSocialMedia.channel_key">
-                            <td>
-                                    <label class="custom-radio">
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark" id="aligned"></span>
-                                            <h6>{{page.name}}</h6>
-                                            <p id="text-overflow" title="{{page.url}}">{{page.url}}</p>
-                                        </label>
-                            </td>
-                            <td><img style="width: 65px; height: 60px;" ng-src="{{page.picture}}" alt=""></td>
+                <div class="progress reduce-progress-bar" ng-show="vm.loadingPageList==true">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%"
+                        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <table id="table" ng-show="vm.loadingPageList==false">
+                    <tr ng-repeat="page in vm.socialMediaPagesList"
+                        ng-if="page.channel_key==vm.selectedSocialMedia.channel_key">
+                        <td ng-click="vm.selectPage(page)">
+                            <label class="custom-radio">
+                                <input type="radio" name="radio">
+                                <span class="checkmark" id="aligned"></span>
+                                <h6>{{page.name}}</h6>
+                                <p id="text-overflow" title="{{page.url}}">{{page.url}}</p>
+                            </label>
+                        </td>
+                        <td><img style="width: 65px; height: 60px;" ng-src="{{page.picture}}" alt=""></td>
                     </tr>
                 </table>
-                <!-- <div class="row" ng-repeat="page in vm.socialMediaPagesList" id="justhoverit">
-                    <label class="custom-radio">
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                        <h6>{{page.name}}</h6>
-                        <p>{{page.url}}</p>
-                    </label>
-                    <img style="width: 65px; height: 60px;" ng-src="{{page.picture}}" alt="">
-                </div> -->
+                <div ng-show="vm.canShowWarning == true" style="text-align: center; margin-top: 25%;">
+                    <h6>Não há páginas do {{vm.selectedSocialMedia.name}} para vincular</h6>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <span class="gap"></span>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <span class="gap"></span> -->
+                <button type="button" class="btn btn-primary" data-dismiss="modal"
+                    ng-click="vm.savePage()">Próximo</button>
             </div>
         </div>
     </div>

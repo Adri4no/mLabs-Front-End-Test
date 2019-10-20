@@ -1,33 +1,27 @@
 <div class="card text-center">
-  <div class="card-header">
-    <!-- <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul> -->
-  </div>
   <div class="card-body">
-    <!-- <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a> -->
-    <div class="row" style="padding-left: 5.5em;">
+    <div class="row" style="padding-left: 3.5em;">
       <div class="card text-center zoom" style="width: 18rem;" ng-repeat=" item in vm.socialMediaList">
-        <div class="card-body">
+        <div class="card-body" ng-hide="item.linkedPage.id">
           <div>
             <i class="zmdi {{item.icon}} zmdi-hc-3x"></i>
             <i class="helper-baloon zmdi zmdi-help-outline zmdi-hc-1x" data-toggle="tooltip" data-placement="top"
               title="{{item.link}}"></i>
           </div>
           <h5 class="card-title">{{item.name}}</h5>
-          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
           <button class="btn btn-primary margin-around-10x" data-toggle="modal" data-target="#exampleModal"
             ng-click="vm.openModalForAddSocialMedia(item)">Adicionar</button>
+        </div>
+        <div ng-class="{'card-linked-twitter':item.channel_key=='twitter',
+        'card-linked-facebook':item.channel_key=='facebook',
+        'card-linked-instagram':item.channel_key=='instagram',
+        'card-linked-pinterest':item.channel_key=='pinterest',
+        'card-linked-youtube':item.channel_key=='youtube'}" ng-show="item.linkedPage.id">
+          <h6>{{item.linkedPage.name}}</h6>
+          <div>
+            <i class="zmdi {{item.icon}} zmdi-hc-4x"></i>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
