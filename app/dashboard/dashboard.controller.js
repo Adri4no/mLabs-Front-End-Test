@@ -120,10 +120,10 @@
             // angular.element( $('[data-toggle="tooltip"]').tooltip())
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
-            })
+            });
             $('#myModal').on('shown.bs.modal', function () {
                 $('#myInput').trigger('focus')
-            })
+            });
         }
 
         function open_modal_for_add_social_media(item) {

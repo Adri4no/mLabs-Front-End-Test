@@ -1,25 +1,9 @@
 (function () {
     angular.module('app')
-        //     .config(routeConfig)
-
-        // function routeConfig($routeProvider) {
-        //     $routeProvider.
-        //     when('/dashboard', {
-        //         templateUrl: 'app/dashboard/dashboard.template.html'
-        //     }).
-        //     when('/phones/:phoneId', {
-        //         template: '<phone-detail></phone-detail>'
-        //     }).
-        //     when('/kek', {
-        //         template: 'alkdjflakjdflkjalds'
-        //     }).
-        //     otherwise('/dashboard');
-        // }
-
         .config(routeConfig);
 
     function routeConfig($stateProvider, $urlRouterProvider) {
-        var helloState = {
+        var dashboardState = {
             name: 'dashboard',
             url: '/dashboard',
             templateUrl: "app/dashboard/dashboard.template.html",
@@ -27,14 +11,49 @@
             controllerAs: "vm"
         }
 
-        var aboutState = {
-            name: 'kek',
-            url: '/kek',
-            template: '<h3>Its the UI-Router hello world app!</h3>'
+        var postState = {
+            name: "agendar-post",
+            url: "/agendar-post",
+            template: '<h3>Em breve...</h3>'
         }
 
-        $stateProvider.state(helloState);
-        $stateProvider.state(aboutState);
+        var inboxState = {
+            name: 'in-box',
+            url: '/in-box',
+            template: '<h3>Em breve...</h3>'
+        }
+
+        var feedState = {
+            name: 'feed',
+            url: '/feed',
+            template: '<h3>Em breve...</h3>'
+        }
+
+        var workflowState = {
+            name: 'workflow',
+            url: '/workflow',
+            template: '<h3>Em breve...</h3>'
+        }
+
+        var acompanhamentosState = {
+            name: 'acompanhamentos',
+            url: '/acompanhamentos',
+            template: '<h3>Em breve...</h3>'
+        }
+
+        var relatoriosState = {
+            name: 'relatorios',
+            url: '/relatorios',
+            template: '<h3>Em breve...</h3>'
+        }
+
+        $stateProvider.state(dashboardState);
+        $stateProvider.state(postState);
+        $stateProvider.state(inboxState);
+        $stateProvider.state(feedState);
+        $stateProvider.state(workflowState);
+        $stateProvider.state(acompanhamentosState);
+        $stateProvider.state(relatoriosState);
 
         // $urlRouterProvider.when('', '/dashboard');
         // $urlRouterProvider.when('/', '/dashboard');
