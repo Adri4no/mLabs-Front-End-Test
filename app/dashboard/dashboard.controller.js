@@ -4,7 +4,6 @@
     angular.module('dashboard')
         .controller('dashboardController', dashboardController)
 
-    // dashboardController.$inject = ['$scope', 'restService', 'sessionService']
 
     function dashboardController($scope, restService, sessionService) {
         var vm = this;
@@ -106,18 +105,11 @@
             }
             // sessionService.destroy('sml')
             if (sessionService.get('sml') != null) {
-                console.log('ha itens guardados, carregando');
                 vm.socialMediaList = sessionService.get('sml');
-                console.log(sessionService.get('sml'));
-            } else {
-                console.log('não a itens guardados');
-
             }
         }
 
         function init_JQuery() {
-            console.log('init jq');
-            // angular.element( $('[data-toggle="tooltip"]').tooltip())
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
             });
@@ -127,14 +119,12 @@
         }
 
         function open_modal_for_add_social_media(item) {
-            console.log('modal opened for:', item.name);
             vm.selectedSocialMedia = item;
             numbersOfListedPages = 0;
             vm.loadingPageList = true;
             vm.canShowWarning = false;
 
             restService.queryGetPages().then(function (response) {
-                console.log(response);
                 vm.socialMediaPagesList = response.data;
                 vm.loadingPageList = false;
                 angular.element(document.getElementById('table')).ready(function (params) {
@@ -145,7 +135,6 @@
                 });
 
             }, function (error) {
-                console.log(error);
                 vm.loadingPageList = false;
                 vm.canShowWarning = true ? numbersOfListedPages == 0 && vm.loadingPageList == false : false;
                 $scope.$apply();
@@ -154,13 +143,11 @@
         }
 
         function select_page(page) {
-            // console.log(page);
             auxPage = page;
         }
 
         function save_page() {
             vm.selectedSocialMedia.linkedPage = auxPage;
-            // console.log(vm.socialMediaList);
             sessionService.persist('sml', vm.socialMediaList)
         }
 

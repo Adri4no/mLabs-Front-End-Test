@@ -8,7 +8,6 @@
         vm.disabled = 'disabled';
 
         vm.get_informations = function (where, el, parent) {
-            console.log(parent);
             remove_selected_css(parent);
             set_selected_css(el);
 

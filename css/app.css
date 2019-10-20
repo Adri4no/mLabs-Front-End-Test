@@ -248,11 +248,10 @@ span.gap {
 
 .menu-item:hover {
     background-color: rgb(204, 204, 204);
-    /* border-bottom: 5px solid #555; */
 }
 
 .menu-item-selected {
-    /* border: 5px solid #555; */
+    background-color: rgb(204, 204, 204);
     border-bottom: 5px solid #555;
 }
 
@@ -275,4 +274,8 @@ span.gap {
 
 .card-header {
     background-color: #555;
+}
+
+.navbar{
+    padding: 0rem 1rem;
 }
