@@ -1,0 +1,281 @@
+body {
+    background-color: #f4f4f4;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0px;
+}
+
+#logoId {
+    color: aqua;
+    padding: 10px;
+    /* padding-bottom: 0px; */
+    border: 5px solid;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.helper-baloon {
+    margin-left: 6em;
+    position: absolute;
+}
+
+.margin-around-10x {
+    margin: 10px;
+}
+
+span.gap {
+    width: 70%;
+}
+
+.zoom {
+    /* padding: 50px; */
+    transition: transform .2s;
+    z-index: 1;
+    /* margin: 0 auto; */
+    /* margin-right: 5px; */
+    /* margin-bottom: 5px; */
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 99;
+    border: 1px solid;
+    /* border-color: #007bff; */
+    border-color: black;
+}
+
+.custom-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    /* font-size: 22px; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom-radio input {
+    position: absolute;
+    /* margin-left: 50px; */
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.custom-radio:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.custom-radio input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-radio input:checked~.checkmark:after {
+    display: block;
+}
+
+.custom-radio .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+#modalBody {
+    height: 300px;
+    /* margin-left: 3px; */
+}
+
+#justhoverit:hover {
+    /* background-color: #ccc; */
+
+}
+
+.checkmark#aligned {
+    top: 15px;
+}
+
+#text-overflow {
+    display: inline-block;
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.card-linked-twitter {}
+
+.card-linked-twitter h6 {
+    padding: 5px;
+    border: 1px solid;
+    border-color: #00aced;
+    background-color: #0085b6;
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-twitter div {
+    width: 100%;
+    height: 100%;
+    background-color: #00aced;
+}
+
+.card-linked-facebook {}
+
+.card-linked-facebook h6 {
+    padding: 5px;
+    border: 1px solid;
+    border-color: #3b5998;
+    background-color: #324c85;
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-facebook div {
+    width: 100%;
+    height: 100%;
+    background-color: #3b5998;
+}
+
+.card-linked-instagram {}
+
+.card-linked-instagram h6 {
+    padding: 5px;
+    border: 1px solid;
+    border-color: #845C50;
+    background-color: rgb(110, 77, 67);
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-instagram div {
+    width: 100%;
+    height: 100%;
+    background-color: #845C50;
+}
+
+.card-linked-pinterest {}
+
+.card-linked-pinterest h6 {
+    padding: 5px;
+    border: 1px solid;
+    border-color: #cb2027;
+    background-color: #af1d22;
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-pinterest div {
+    width: 100%;
+    height: 100%;
+    background-color: #cb2027;
+}
+
+.card-linked-youtube {}
+
+.card-linked-youtube h6 {
+    padding: 5px;
+    border: 1px solid;
+    border-color: #9c0000;
+    background-color: #9c0000;
+    color: #fff;
+    margin: 0;
+}
+
+.card-linked-youtube div {
+    width: 100%;
+    height: 100%;
+    background-color: #bb0000;
+}
+
+
+.card-linked-twitter div i,
+.card-linked-facebook div i,
+.card-linked-instagram div i,
+.card-linked-pinterest div i,
+.card-linked-youtube div i {
+    color: #fff;
+    position: absolute;
+    top: 85px;
+    left: 30px;
+}
+
+.card-linked-twitter div div,
+.card-linked-facebook div div,
+.card-linked-instagram div div,
+.card-linked-pinterest div div,
+.card-linked-youtube div div {
+    height: 200px;
+}
+
+.reduce-progress-bar {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 2;
+}
+
+.menu-item:hover {
+    background-color: rgb(204, 204, 204);
+}
+
+.menu-item-selected {
+    background-color: rgb(204, 204, 204);
+    border-bottom: 5px solid #555;
+}
+
+@media(min-width: 700px) {
+    .menu {
+        display: flex;
+    }
+}
+
+@media(max-width:699px) {
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu-item {
+        padding-right: 8px;
+    }
+}
+
+.card-header {
+    background-color: #555;
+}
+
+.navbar{
+    padding: 0rem 1rem;
+}

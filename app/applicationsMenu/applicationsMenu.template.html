@@ -1,0 +1,64 @@
+<div class="menu">
+    <div class="menu-item menu-item-selected" ng-click="vm.get_informations('dashboard', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-view-dashboard zmdi-hc-2x"></i>
+        <span>Dashboard</span>
+    </div>
+    <div class="menu-item" ng-click="vm.get_informations('agendar-post', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-calendar zmdi-hc-2x"></i>
+        <span>Agendar Post</span>
+    </div>
+    <div class="menu-item" ng-click="vm.get_informations('in-box', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-inbox zmdi-hc-2x"></i>
+        <span>In Box</span>
+    </div>
+    <div class="menu-item" ng-click="vm.get_informations('feed', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-comments zmdi-hc-2x"></i>
+        <span>Feed</span>
+    </div>
+    <div class="menu-item" ng-click="vm.get_informations('workflow', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-format-list-numbered zmdi-hc-2x"></i>
+        <span>Workflow</span>
+    </div>
+    <div class="menu-item" ng-click="vm.get_informations('acompanhamentos', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-check-all zmdi-hc-2x"></i>
+        <span>Acompanhamentos</span>
+    </div>
+    <div class="menu-item" ng-click="vm.get_informations('relatorios', $event.path[1], $event.path[2].children)">
+        <i class="zmdi zmdi-equalizer zmdi-hc-2x"></i>
+        <span>Relatórios</span>
+    </div>
+</div>
+
+<!-- <div class="container" style="background-color: #6c757d;">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <p id="logoId">LOGO</p>
+        <label class="btn btn-secondary active" ng-click="vm.goTo('dashboard')">
+            <div><i class="zmdi zmdi-view-dashboard zmdi-hc-2x"></i></div>
+            <input type="radio" name="options" id="option1" autocomplete="off" checked> Dashboard
+        </label>
+        <label class="btn btn-secondary" ng-click="vm.goTo('kek')">
+            <div><i class="zmdi zmdi-calendar zmdi-hc-2x"></i></div>
+            <input type="radio" name="options" id="option2" autocomplete="off"> Agendar Post
+        </label>
+        <label class="btn btn-secondary">
+            <div><i class="zmdi zmdi-inbox zmdi-hc-2x"></i></div>
+            <input type="radio" name="options" id="option3" autocomplete="off"> In Box
+        </label>
+        <label class="btn btn-secondary">
+            <div><i class="zmdi zmdi-comments zmdi-hc-2x"></i></div>
+            <input type="radio" name="options" id="option3" autocomplete="off"> Feed
+        </label>
+        <label class="btn btn-secondary">
+            <div><i class="zmdi zmdi-format-list-numbered zmdi-hc-2x"></i></div>
+            <input type="radio" name="options" id="option3" autocomplete="off"> Workflow
+        </label>
+        <label class="btn btn-secondary">
+            <div><i class="zmdi zmdi-check-all zmdi-hc-2x"></i></div>
+            <input type="radio" name="options" id="option3" autocomplete="off"> Acompanhamentos
+        </label>
+        <label class="btn btn-secondary">
+            <div><i class="zmdi zmdi-equalizer zmdi-hc-2x"></i></div>
+            <input type="radio" name="options" id="option3" autocomplete="off"> Relatorios
+        </label>
+    </div>
+</div> -->
