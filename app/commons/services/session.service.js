@@ -2,8 +2,6 @@
     angular.module("app")
         .service("sessionService", sessionService);
 
-    // sessionService.$inject = ['$cookies'];
-
     function sessionService($cookies) {
         var localStoreAvailable = typeof (Storage) !== "undefined";
 

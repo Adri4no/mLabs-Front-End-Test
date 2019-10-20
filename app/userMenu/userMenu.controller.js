@@ -5,7 +5,7 @@
     function userMenuController($scope) {
         var vm = this
 
-        vm.name = "Adriano"
+        vm.name = "Admin"
         vm.controllerName = 'userMenuController'
 
     }
