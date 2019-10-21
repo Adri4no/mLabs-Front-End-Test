@@ -1,16 +1,27 @@
 # mLabs-Front-End-Test
-Projeto para o processo seletivo
+Projeto para o processo seletivo.
 
-abrir terminal no projeto
+## Ferramentas:
+Foi utilizado na produção do projeto o framework AngularJS para a estrutura, e Bootstrap
+para o visual. Para testes e2e, protractor, e para TDD, Karma+jasmine.
+Escolhi trabalhar com AngularJS no desenvolvimento do projeto, por que possuo 2 anos de
+experiência com framework. Cogitei em usar Angular ou React (que são ferramentas mais novas),
+mas, ter mais experiência com AngularJS foi o determinante.
 
-npm install -> dependencias do projeto
-npm install -g protractor -> para test e2e
-webdriver-manager update -> update do webdriver para poder rodar os testes e2e
+## Instruções de instalação:
 
-webdriver-manager start -> em um terminal a parte para poder habilitar o server de testes
+Na pasta raiz do projeto abra um terminal.
 
-depois de instalar tudo, para rodar o projeto:
+Use *npm install* para instalar as dependências do projeto.
+Use *npm install -g protractor* ferramenta para testes e2e.
+E seguida *webdriver-manager update* para atualizar o protractor.
 
-npm run start
+## Instruções de uso:
 
-depois é so entrar em uma das urls listadas
+Para iniciar o projeto apenas digite no terminal: *npm run start*
+depois é so entrar em uma das urls que aparecerão.
+
+Para iniciar os testes e2e, abra uma segunda janela do terminal e digite:
+*webdriver-manager start* e depois em uma terceira janela do terminal, inicie os testes com: *npm run test:e2e*
+
+Para os testes unitários, apenas digite no terminal: *npm run test:unit*
