@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx serve"
+    "start": "npx serve",
+    "test:e2e": "cd app/tests/e2e && protractor conf.js"
   },
   "repository": {
     "type": "git",
